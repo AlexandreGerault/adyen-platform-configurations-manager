@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { Configuration, ExistingConfiguration } from "../types";
 
-const BASE_URL = "http://192.168.1.17:3333";
+const BASE_URL = import.meta.env.VITE_API_BASE_URI ?? "http://localhost:3333";
 
 const fetchConfigurations = createAsyncThunk(
   "configurations/fetchAll",

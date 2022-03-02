@@ -11,6 +11,8 @@ export function ListConfigurations() {
   );
   const dispatch = useDispatch();
 
+  console.log(configurations);
+
   useEffect(() => {
     if (configurations.length === 0) {
       dispatch(fetchConfigurations());
