@@ -1,0 +1,9 @@
+[
+  "SSL",
+  "SSLInsecureCiphers",
+  "TLS",
+  "TLSv10",
+  "TLSv10InsecureCiphers",
+  "TLSv11",
+  "TLSv12"
+]

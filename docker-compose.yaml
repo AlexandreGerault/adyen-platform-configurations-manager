@@ -1,0 +1,20 @@
+services:
+  back:
+    build:
+      context: docker/${ENV}/back/
+      dockerfile: Dockerfile
+    ports: 
+      - 3333:3333
+    environment:
+      - ADYEN_MARKETPLACE_API_KEY=${ADYEN_MARKETPLACE_API_KEY}
+    volumes:
+      - ./apps/back:/usr/src/apps/back
+  
+  front:
+    build:
+      context: docker/${ENV}/front
+      dockerfile: Dockerfile
+    ports: 
+      - 3000:3000
+    volumes:
+      - ./apps/front:/usr/src/apps/front
