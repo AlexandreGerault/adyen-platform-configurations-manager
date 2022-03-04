@@ -38,7 +38,8 @@ export function CreateConfigurationForm() {
           await dispatch(createConfiguration(values));
           navigate("/");
         }}
-        render={({ values }) => (
+      >
+        {({ values }) => (
           <Form className="space-y-2">
             <Field name="active" as={Checkbox} label="Active ?" />
             <Field
@@ -123,7 +124,7 @@ export function CreateConfigurationForm() {
             </div>
           </Form>
         )}
-      />
+      </Formik>
     </>
   );
 }
